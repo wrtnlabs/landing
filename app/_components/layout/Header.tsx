@@ -9,7 +9,7 @@ export default async function Header() {
   const pathname = headerList.get("x-forwarded-pathname") ?? "";
 
   return (
-    <header className="sticky top-0 flex w-full justify-center bg-linear-to-t to-[#030303]/50 pt-5">
+    <header className="sticky top-0 z-50 flex w-full justify-center bg-linear-to-t to-[#030303]/50 pt-5">
       <Tabs defaultValue={pathname}>
         <TabsList>
           <Link href="/agentica">
