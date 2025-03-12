@@ -1,9 +1,5 @@
-import clsx from "clsx";
 import { HamIcon } from "lucide-react";
-import Link from "next/link";
-
-const sectionTitleStyle = clsx(["text-zinc-600"]);
-const linkStyle = clsx(["text-zinc-200"]);
+import { StyledLink } from "../common/link";
 
 const FOOTER_CONTENTS = [
   {
@@ -26,17 +22,12 @@ export default function Footer() {
       <HamIcon color="#ffffff" size={72} />
       <div className="flex gap-16">
         {FOOTER_CONTENTS.map(({ title, links }) => (
-          <nav key={title} className="flex flex-col gap-1">
-            <p className={sectionTitleStyle}>{title}</p>
+          <nav key={title} className="flex flex-col gap-2 md:gap-3">
+            <p className="text-sm text-zinc-600 md:text-[21px]">{title}</p>
             {links.map(({ label, href }) => (
-              <Link
-                key={label}
-                href={href}
-                target="_blank"
-                className={linkStyle}
-              >
+              <StyledLink key={label} href={href} target="_blank">
                 {label}
-              </Link>
+              </StyledLink>
             ))}
           </nav>
         ))}
