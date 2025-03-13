@@ -13,7 +13,7 @@ interface FuncCallCardProps {
 
 export function FuncCallCard({ title, description }: FuncCallCardProps) {
   return (
-    <Card className="relative flex flex-auto cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border-zinc-700 bg-[#030303]/70 p-5 pb-12">
+    <Card className="relative flex flex-auto cursor-pointer flex-col justify-center gap-5 overflow-hidden rounded-2xl border-zinc-700 bg-[#030303]/70 px-3 py-3">
       {/* TODO: icon */}
       <div className="flex items-center gap-2.5">
         <CatIcon size={22} color="#FFFFFF" />
