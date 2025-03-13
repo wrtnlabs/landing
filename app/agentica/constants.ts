@@ -1,3 +1,18 @@
+export const FUNC_CALL_CODE = `import { Agentica } from "@agentica/core";
+import typia from "typia";
+
+const agent = new Agentica({
+  controllers: [ 
+   await fetch(
+     "https://shopping-be.wrtn.ai/editor/swagger.json", 
+   ).then(r => r.json()),
+   typia.llm.application<ShoppingCounselor>(),
+   typia.llm.application<ShoppingPolicy>(),
+   typia.llm.application<ShoppingSearchRag>(),
+  ],
+});
+await agent.conversate("I wanna buy MacBook Pro");`;
+
 export const FUNC_CALLS = [
   {
     icon: "icon",
