@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger } from "../common/tabs";
 import { headers } from "next/headers";
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default async function Header() {
   const headerList = await headers();

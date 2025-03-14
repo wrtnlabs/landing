@@ -13,14 +13,16 @@ interface CoreValueCardProps {
 
 export function CoreValueCard({ title, description }: CoreValueCardProps) {
   return (
-    <Card className="relative flex h-[400px] flex-auto cursor-pointer flex-col justify-between overflow-hidden rounded-[36px] border-zinc-700 bg-[#030303]/70 p-5 pb-12">
+    <Card className="relative flex flex-1 cursor-pointer flex-col justify-between overflow-hidden rounded-[36px] border-zinc-700 bg-[#030303]/70 p-5 pb-12">
       {/* TODO: icon */}
       <CatIcon size={80} color="#FFFFFF" />
 
       <div className="flex flex-col gap-3">
-        <CardTitle className="text-[40px] text-[#F6F6F3]">{title}</CardTitle>
+        <CardTitle className="text-2xl leading-8 font-[450] text-[#F6F6F3] md:text-[28px] lg:text-[40px]">
+          {title}
+        </CardTitle>
         <hr className="border-t-2 border-zinc-600" />
-        <CardDescription className="h-28 text-base text-zinc-400">
+        <CardDescription className="text-base text-zinc-400">
           {description}
         </CardDescription>
       </div>
