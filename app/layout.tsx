@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "./_components/layout/Footer";
 import Header from "./_components/layout/Header";
+import LenisProvider from "./provider/LenisProvider";
 
 export const metadata: Metadata = {
   title: "Agentica",
@@ -17,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#030303]">
-        <Header />
-        <main className="px-20">{children}</main>
-        <Footer />
+        <LenisProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );

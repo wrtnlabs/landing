@@ -1,38 +1,26 @@
-import { ArrowUpRight } from "lucide-react";
-import { Button } from "../_components/common/button";
 import { CoreValueCard } from "./_components/CoreValueCard";
 import { FuncCallCard } from "./_components/FuncCallCard";
 import { CORE_VALUES, FUNC_CALLS } from "./constants";
 import { FuncCallCode } from "./_components/FuncCallCode";
 
+import { Section } from "./_components/Section";
+import { CardShowcase } from "../_components/common/card-showcase";
+import { PreviewCard } from "../_components/common/preview-card";
+
+import { WelcomeSection } from "./_components/WelcomeSection";
+
 export default async function AgenticaPage() {
   return (
     <>
       {/* Welcome */}
-      <div className="flex h-[calc(100vh_-_78px)] items-center justify-between gap-6 py-8">
-        <div className="flex flex-col gap-9">
-          <div className="flex flex-col gap-4">
-            <h1 className="text-[80px] font-semibold text-zinc-50">Agentica</h1>
-            <p className="text-xl whitespace-pre-line text-[#767676]">
-              {
-                "Agentic AI Framework specialized in LLM Function Calling\n enhanced by TypeScript compiler skills"
-              }
-            </p>
-          </div>
-          <div className="flex gap-[18px]">
-            <Button>
-              Docs
-              <ArrowUpRight />
-            </Button>
-            <Button variant="secondary">Github</Button>
-          </div>
-        </div>
-        <div className="hidden h-full w-[480px] rounded-[20px] bg-[#27272A] md:block"></div>
-        ;
-      </div>
+      <WelcomeSection />
 
       {/* Function calling */}
-      <div className="lg:h-screen">
+
+      <Section
+        title="Function calling"
+        description="One click to turn your backend into an AI agent."
+      >
         <div className="flex flex-col gap-8 rounded-4xl border border-zinc-700 p-2 lg:flex-row">
           <FuncCallCode />
           <div className="flex flex-col gap-4 rounded-3xl border border-zinc-700 p-2 md:flex-row lg:w-[394px] lg:flex-col">
@@ -41,18 +29,44 @@ export default async function AgenticaPage() {
             ))}
           </div>
         </div>
-      </div>
+      </Section>
 
-      {/* Core Value */}
-      <div className="lg:h-screen">
+      <Section
+        title="Core Value"
+        description="Simplicity at scale—AI for every developer."
+      >
         <div className="flex flex-col gap-8 rounded-[44px] border border-zinc-700 p-2 md:flex-row">
           {CORE_VALUES.map((value) => (
             <CoreValueCard key={value.title} {...value} />
           ))}
         </div>
-      </div>
+      </Section>
 
       {/* Showcase */}
+      <Section
+        title="Showcase"
+        description="This is a minimal full-stack React application of Agentica."
+      >
+        <div className="flex flex-col gap-8 lg:flex-row lg:gap-5">
+          <CardShowcase
+            imageSrc="https://picsum.photos/200/300"
+            title="Github Agent"
+            description="Meet an AI agent that uses GitHub’s main APIs to handle your tasks—from scanning key projects to generating refined code, requesting reviews, and even committing changes. "
+          />
+          <CardShowcase
+            imageSrc="https://picsum.photos/200/300"
+            title="Github Agent"
+            description="Meet an AI agent that uses GitHub’s main APIs to handle your tasks—from scanning key projects to generating refined code, requesting reviews, and even committing changes. "
+          />
+        </div>
+      </Section>
+      <section className="flex w-full pb-[74px] md:justify-end md:pb-[120px]">
+        <PreviewCard
+          href="/agentica/github-agent"
+          title="Github Agent"
+          image="https://picsum.photos/200/300"
+        />
+      </section>
     </>
   );
 }
