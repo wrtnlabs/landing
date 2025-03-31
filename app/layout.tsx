@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "./_components/layout/Footer";
 import Header from "./_components/layout/Header";
-import LenisProvider from "./provider/LenisProvider";
 
 export const metadata: Metadata = {
-  title: "Agentica",
-  description: "Agentica Landing Page",
-  keywords: ["agentica", "autoview"],
+  title: "Wrtnlabs",
+  description: "Wrtnlabs Landing Page",
 };
 
 export default function RootLayout({
@@ -17,12 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-[#030303]">
-        <LenisProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </LenisProvider>
+      <body className="bg-white">
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

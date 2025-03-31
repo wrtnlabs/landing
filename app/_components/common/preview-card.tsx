@@ -6,8 +6,7 @@ import Link from "next/link";
 
 import { useHover } from "react-use";
 import { Hoverable } from "./hover";
-
-import { ArrowRightIcon } from "../icons/ArrowRight";
+import { ArrowRightIcon } from "lucide-react";
 
 interface PreviewCardProps {
   title: string;
