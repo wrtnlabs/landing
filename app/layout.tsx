@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import "nextra-theme-blog/style.css";
+
+import type { Metadata } from "next";
 import Footer from "./_components/layout/Footer";
 import Header from "./_components/layout/Header";
 
