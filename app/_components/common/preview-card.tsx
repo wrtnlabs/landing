@@ -1,12 +1,13 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import { cn } from "@/app/_lib/utils";
+
 import Link from "next/link";
 
 import { useHover } from "react-use";
 import { Hoverable } from "./hover";
 import { ArrowRightIcon } from "lucide-react";
+import { cn } from "@/app/_lib/cn";
 
 interface PreviewCardProps {
   title: string;
@@ -25,7 +26,7 @@ export function PreviewCard({ title, image, href }: PreviewCardProps) {
                 <p className="text-lg font-[450] text-zinc-400">Next</p>
                 <p className="text-2xl font-medium text-zinc-50">{title}</p>
               </div>
-              {/** Right Arrow Button */}
+              {/* Right Arrow Button */}
               <Link href={href}>
                 <ArrowRightIcon
                   width={48}
