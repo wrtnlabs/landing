@@ -1,9 +1,10 @@
-import "./globals.css";
-import "nextra-theme-blog/style.css";
 
+import { Head } from "nextra/components";
 import type { Metadata } from "next";
 import Footer from "./_components/layout/Footer";
 import Header from "./_components/layout/Header";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Wrtnlabs",
@@ -16,12 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="bg-white">
+    <html lang="en" suppressHydrationWarning>
+      <Head />
+      <body>
         <Header />
         <main>{children}</main>
         <Footer />
       </body>
-    </html>
+    </html >
   );
 }
