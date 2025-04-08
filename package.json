@@ -1,12 +1,14 @@
 {
-  "name": "test",
+  "name": "wrtnlabs",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wrtnlabs.github.io/landing",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
@@ -14,6 +16,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.4.10",
+    "gh-pages": "^6.3.0",
     "lenis": "^1.2.3",
     "lucide-react": "^0.477.0",
     "next": "15.2.1",
