@@ -1,5 +1,5 @@
 "use client";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { AGENT_OS } from '@/app/_constants/agent-os';
 import { Mousewheel } from 'swiper/modules';
 import { useRef, useState } from 'react';
@@ -10,7 +10,7 @@ import 'swiper/css';
 
 export default function AgentOS() {
     const [activeIndex, setActiveIndex] = useState(0);
-    const swiperRef = useRef<any>(null);
+    const swiperRef = useRef<SwiperClass>(null);
 
     const handleTabClick = (index: number) => {
         swiperRef.current?.slideToLoop(index, 600);

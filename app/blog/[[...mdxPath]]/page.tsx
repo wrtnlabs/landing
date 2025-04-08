@@ -7,7 +7,12 @@ import "nextra-theme-blog/style.css";
 
 export const generateStaticParams = generateStaticParamsFor("mdxPath");
 
-export async function generateMetadata(props: any) {
+type BlogDetailProps = {
+  params: { mdxPath: string[]; };
+};
+
+
+export async function generateMetadata(props: BlogDetailProps) {
   const params = await props?.params;
   const { metadata } = await importPage(params?.mdxPath);
   return metadata;
@@ -15,12 +20,12 @@ export async function generateMetadata(props: any) {
 
 const Wrapper = getMDXComponents().wrapper;
 
-export default async function BlogDetailPage(props: any) {
+export default async function BlogDetailPage(props: BlogDetailProps) {
   const params = await props?.params;
   const result = await importPage(params?.mdxPath);
 
   const { default: MDXContent, toc, metadata } = result;
-  const { tags, ...filteredMetadata } = metadata;
+  const { tags: _, ...filteredMetadata } = metadata;
 
   if (Object.keys(params).length === 0) return <BlogList />;
 
