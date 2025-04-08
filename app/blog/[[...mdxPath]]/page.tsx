@@ -7,12 +7,8 @@ import "nextra-theme-blog/style.css";
 
 export const generateStaticParams = generateStaticParamsFor("mdxPath");
 
-type BlogDetailProps = {
-  params: { mdxPath: string[]; };
-};
-
-
-export async function generateMetadata(props: BlogDetailProps) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function generateMetadata(props: any) {
   const params = await props?.params;
   const { metadata } = await importPage(params?.mdxPath);
   return metadata;
@@ -20,12 +16,14 @@ export async function generateMetadata(props: BlogDetailProps) {
 
 const Wrapper = getMDXComponents().wrapper;
 
-export default async function BlogDetailPage(props: BlogDetailProps) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function BlogDetailPage(props: any) {
   const params = await props?.params;
   const result = await importPage(params?.mdxPath);
 
   const { default: MDXContent, toc, metadata } = result;
-  const { tags: _, ...filteredMetadata } = metadata;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { tags, ...filteredMetadata } = metadata;
 
   if (Object.keys(params).length === 0) return <BlogList />;
 
