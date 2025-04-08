@@ -8,4 +8,5 @@ const withNextra = nextra({
 export default withNextra({
   // ... Other Next.js config options
   basePath: "/landing",
+  assetPrefix: "/landing",
 });
