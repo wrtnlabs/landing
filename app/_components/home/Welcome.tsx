@@ -2,7 +2,7 @@ export default function Welcome() {
     return (
         <section>
             <video
-                src="/videos/main_bg.mp4"
+                src="/clone/videos/main_bg.mp4"
                 muted
                 loop
                 autoPlay

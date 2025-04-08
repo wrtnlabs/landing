@@ -30,14 +30,14 @@ export default function Home() {
         </div>
 
         <video
-          src="/videos/agent.mp4"
+          src="/clone/videos/agent.mp4"
           muted
           loop
           autoPlay
           className="relative h-auto w-full object-cover md:h-[907px] md:w-[720px] md:object-contain"
         >
-          <source src="/videos/agent.mp4" type="video/mp4" />
-          <source src="/videos/agent.mp4" type="video/webm" />
+          <source src="/clone/videos/agent.mp4" type="video/mp4" />
+          <source src="/clone/videos/agent.mp4" type="video/webm" />
         </video>
       </div>
     </div>
