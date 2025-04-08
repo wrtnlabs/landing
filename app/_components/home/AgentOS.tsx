@@ -57,8 +57,13 @@ export default function AgentOS() {
                     className="hidden md:block w-screen"
                 >
                     {AGENT_OS.map(({ title, heading, description, video }, i) => (
-                        <SwiperSlide key={i} className="w-[62vw] max-w-[1010px] overflow-hidden h-[624px]! ">
-                            <div className="w-full min-w-[1010px] bg-[#F7F7F4] flex rounded-[24px] md:flex-row flex-col pt-[60px] md:pt-[30px] p-[16px] md:p-[30px] gap-[20px] items-center duration-500 transition-all">
+                        <SwiperSlide key={i} className={clsx(
+                            "w-[62vw] max-w-[1010px] h-[624px]! transition-transform! duration-700 ease-in-out",
+                            activeIndex === i
+                                ? "translate-y-0"
+                                : "translate-y-[100px]"
+                        )}>
+                            <div className="w-full min-w-[1010px] bg-[#F7F7F4] flex rounded-[24px] md:flex-row flex-col pt-[60px] md:pt-[30px] p-[16px] md:p-[30px] gap-[20px] items-center transition-all duration-500">
                                 <div className="md:w-1/2 w-full text-left md:px-[50px] px-[20px]">
                                     <p className='text-base text-[#071511]'>{title}</p>
                                     <h3 className="text-[32px] text-[#071511] whitespace-pre-line">{heading}</h3>
