@@ -1,11 +1,10 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import * as TabsPrimitive from "@radix-ui/react-tabs";
+import * as React from "react"
+import * as TabsPrimitive from "@radix-ui/react-tabs"
+import { cn } from "@/app/_lib/cn"
 
-import { cn } from "@/app/_lib/utils/cn";
-import { motion } from "framer-motion";
-import { useAttributeObserver } from "@/app/_hooks/useAttributeObserver";
+
 
 function Tabs({
   className,
@@ -14,10 +13,10 @@ function Tabs({
   return (
     <TabsPrimitive.Root
       data-slot="tabs"
-      className={cn("relative flex flex-col gap-2", className)}
+      className={cn("flex flex-col gap-2", className)}
       {...props}
     />
-  );
+  )
 }
 
 function TabsList({
@@ -28,49 +27,28 @@ function TabsList({
     <TabsPrimitive.List
       data-slot="tabs-list"
       className={cn(
-        "text-muted-foreground inline-flex h-[58px] w-full items-center justify-center gap-8 rounded-full bg-zinc-900 p-3",
-        className,
+        "text-muted-foreground gap-2.5 inline-flex w-fit items-center justify-center rounded-full border border-[#E4E4E4] p-2",
+        className
       )}
       {...props}
     />
-  );
+  )
 }
 
 function TabsTrigger({
   className,
-  children,
   ...props
 }: React.ComponentProps<typeof TabsPrimitive.Trigger>) {
-  const [ref, attribute] =
-    useAttributeObserver<HTMLButtonElement>("data-state");
-  const isActive = attribute === "active";
-
   return (
     <TabsPrimitive.Trigger
-      asChild
       data-slot="tabs-trigger"
       className={cn(
-        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring relative z-20 inline-flex h-[34px] cursor-pointer items-center justify-center gap-2.5 rounded-full px-4 text-sm font-medium whitespace-nowrap text-slate-50 transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:text-slate-900 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
-        !isActive && "transition-all duration-300 hover:bg-zinc-800",
-        className,
+        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 text-foreground cursor-pointer dark:text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 text-base font-[450] whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        className
       )}
-      ref={ref}
       {...props}
-    >
-      <motion.li initial={false}>
-        {children}
-        {isActive && (
-          <motion.div
-            layoutId="activeTabIndicator"
-            className="absolute right-0 bottom-0 left-0 -z-10 h-full rounded-full bg-zinc-50 shadow-sm"
-            initial={false}
-            transition={{ type: "spring", duration: 0.6 }}
-            animate={{ opacity: 1 }}
-          />
-        )}
-      </motion.li>
-    </TabsPrimitive.Trigger>
-  );
+    />
+  )
 }
 
 function TabsContent({
@@ -83,7 +61,7 @@ function TabsContent({
       className={cn("flex-1 outline-none", className)}
       {...props}
     />
-  );
+  )
 }
 
-export { Tabs, TabsList, TabsTrigger, TabsContent };
+export { Tabs, TabsList, TabsTrigger, TabsContent }
