@@ -19,7 +19,7 @@ export default function HowItWorks() {
             </Button>
             <div className="relative aspect-3/1 w-full cursor-pointer overflow-hidden rounded-3xl">
                 <Image
-                    src="/images/main_2.png"
+                    src="/landing/images/main_2.png"
                     alt="thumbnail"
                     fill
                     objectFit="cover"

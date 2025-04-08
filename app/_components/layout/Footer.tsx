@@ -31,7 +31,7 @@ export default function Footer() {
   return (
     <footer className="grid grid-cols-2 md:grid-cols-4 md:h-[484px] bg-zinc-900 px-4 md:px-16 py-32 md:pb-10 md:pt-24">
       <div className="hidden md:flex flex-col h-full justify-between">
-        <Image src="/images/logo-white.svg" alt="logo" width={121} height={28} />
+        <Image src="/landing/images/logo-white.svg" alt="logo" width={121} height={28} />
         <p className="text-zinc-600 text-sm">© 2025 Wrtn Labs</p>
       </div>
       <div className="hidden md:block" />

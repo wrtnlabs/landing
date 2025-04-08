@@ -8,6 +8,8 @@ const withNextra = nextra({
 export default withNextra({
   // ... Other Next.js config options
   output: "export",
+  basePath: "/landing",
+  assetPrefix: "/landing",
   trailingSlash: true,
   images: {
     unoptimized: true,
