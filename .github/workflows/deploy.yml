@@ -1,4 +1,5 @@
-name: Deploy Website
+name: deploy
+
 on:
   push:
     branches:
@@ -30,7 +31,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 10
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Build Website
