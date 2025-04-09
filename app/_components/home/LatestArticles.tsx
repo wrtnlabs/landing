@@ -18,7 +18,7 @@ export default async function LatestArticles() {
                 {posts.map(({ frontMatter, route }, i) => {
                     const { title, date, tags, thumbnail } = frontMatter;
                     return (
-                        <Link href={`/blog/${route}`} key={i} className="flex flex-col justify-between h-[395px] pb-2.5 border-b border-[#E3E3E3] cursor-pointer group">
+                        <Link href={`/blog${route}`} key={i} className="flex flex-col justify-between h-[395px] pb-2.5 border-b border-[#E3E3E3] cursor-pointer group">
                             <div className="flex flex-col gap-6">
                                 <div className="relative w-full aspect-video overflow-hidden">
                                     <Image src={thumbnail} alt="thumbnail" fill objectFit="cover" className="group-hover:scale-105 duration-300" />
