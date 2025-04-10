@@ -1,0 +1,140 @@
+---
+title: The Journey of Building a CS Refund Agent
+date: "2025-03-28"
+tags:
+  - Team News
+author: Leo Ko
+thumbnail: "/landing/contents/the-journey-of-building-a-cs-refund-agent/1.jpg"
+---
+
+# **Going Beyond Sierra with a True AI Agent**
+
+![agent](/contents/the-journey-of-building-a-cs-refund-agent/1.jpg)
+
+What comes to mind when you hear the term _AI agent_?
+
+For the Wrtn Labs team, we immediately think of _AI colleagues_.
+
+In today’s era of AI agents, we no longer see them as mere tools that boost productivity. They’re now evolving into true collaborators—companions that work alongside us.
+
+At Wrtn, we’re already working with various AI teammates (a.k.a. agents) integrated into our internal operations. But how exactly do humans and AI agents collaborate? Let us show you how.
+
+---
+
+# **Why We Needed a CS Refund Agent**
+
+![agent](/contents/the-journey-of-building-a-cs-refund-agent/2.jpg)
+
+One of our flagship product at Wrtn is “Crack,” an AI-powered content service where users can have emotionally resonant conversations with personalized AI characters—like chatting with a close friend. Users can create their own characters or interact with ones created by others.
+
+As Crack’s popularity surged, we started receiving more refund requests—sometimes due to technical issues, other times due to user-specific concerns. Recently, this volume has grown even more with Google Play’s new pre-payment policy.
+
+At first, refund-related requests were infrequent. But as Crack scaled rapidly, CS inquiries naturally increased too. Given our commitment to customer experience, we’ve maintained a generous refund policy for eligible users.
+
+One day, our “Crack” team proposed hiring a new CS manager to handle just the refund volume.
+
+But during a casual lunch chat, the Wrtn Labs team had an idea:
+
+“Wait—why not build a refund-specialized AI agent using our own framework instead of hiring someone new?”
+
+This moment sparked a serious consideration: rather than increasing headcount, could we tackle this challenge by introducing an agent?
+
+---
+
+# **Setting the Goal**
+
+After a meeting with the “Crack” team, we discovered something surprising.
+
+The CS team was spending hours every day processing refunds—tasks filled with repetitive steps. And unless you’ve worked with AI agents firsthand, it’s hard to understand which tasks can be realistically automated.
+
+We sat down with our CS manager to walk through the refund workflow, which includes:
+
+1. Checking the user’s payment history
+2. Verifying if the case qualifies for a refund
+3. Final approval and execution of the refund
+
+Sounds simple on paper, but in reality, it involved many hidden steps: verifying user identity, checking usage logs, accessing admin dashboards, and more.
+
+During peak hours (especially evenings), delays in processing led to long wait times and user dissatisfaction.
+
+---
+
+# **A Look at Competing Services**
+
+Among the services we closely observed was **Sierra AI**, often referenced by companies exploring AI for CS operations.
+
+Sierra made a name for itself by converting traditional CS workflows into agent-powered ones for North American consumer brands like Casper.
+
+However, as we tried Sierra ourselves, we found a key limitation:
+
+While it could make **recommendations**, it couldn’t **take real actions**.
+
+It could suggest products or track deliveries—things our own agents can also do—but when it came to _actually processing a refund_, Sierra stopped short.
+
+![Sierra](/contents/the-journey-of-building-a-cs-refund-agent/3.png)
+
+This is where Wrtn Labs stands apart. With our in-house framework—**Agentica**—we enable sophisticated LLM function calling and orchestration. That’s what allowed us to go beyond recommendations and build agents that take real action.
+
+So, we set a bold goal:
+
+> “All refund-related CS tasks at Wrtn should be handled by an AI agent.”
+
+We formed a dedicated task force to build the **CS Refund Agent**, eventually naming it **Cyrano**—our newest AI teammate.
+
+Want to dive into the technical details behind how we built Cyrano? [Check out our developer’s blog post here.](https://velog.io/@seunghwa17/AI-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EB%A1%9C-CS-%ED%99%98%EB%B6%88-%EB%AC%B8%EC%9D%98-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0-Agentica-%ED%99%9C%EC%9A%A9%EA%B8%B0)
+
+---
+
+# **The Impact**
+
+Since adopting Cyrano, we can’t imagine running CS without it.
+
+Here’s a first look at Cyrano in action:
+
+![chat action](/contents/the-journey-of-building-a-cs-refund-agent/4.png)
+
+From refund request to confirmation: 30 seconds.
+
+From request to actual card cancellation: 10 seconds.
+
+Everything completed in under a minute. Incredible, right?
+
+Let’s break down the changes Cyrano brought to our team:
+
+1. **Dramatic Time Reduction**
+
+Here’s how the old process looked.
+
+![process](/contents/the-journey-of-building-a-cs-refund-agent/5.png)
+
+All of this used to take **15 minutes per case**, and refunds could take up to 3 business days.
+
+Cyrano reduced this process to under **1 minute**—and handles multiple requests simultaneously without delay.
+
+1. **Boosting Customer Satisfaction**
+
+One of our biggest concerns was whether users would trust an AI agent for refunds. Would they skip it and demand a human rep instead?
+
+Given how often people experience low-quality AI services, we understood the skepticism.
+
+But the outcome surprised us.
+
+Users treated Cyrano like a real person—many even used formal language when chatting. And more importantly, they were amazed that a refund could be **executed**, not just requested, within **24 hours**.
+
+Unlike Sierra, which often ends conversations with “please contact us by email,” Cyrano takes real action—or hands off seamlessly to a human when needed. This dramatically improved our CS satisfaction scores.
+
+1. **Enhanced Team Productivity**
+
+Cyrano didn’t just help customers—it helped our team.
+
+Our CS manager used to spend over 14 hours a week on refunds. Now, Cyrano handles 75% of those tasks, freeing up time for more impactful work.
+
+In fact, Cyrano has earned the nickname **“Three-Quarters Roddy”**, after our CS manager, because it replaced so much of their workload.
+
+![statistics](/contents/the-journey-of-building-a-cs-refund-agent/6.png)
+
+We hope this gave you a peek into how **Agentica** enables real-world AI agent implementation at Wrtn Labs.
+
+If your company is exploring AI agent solutions—especially ones requiring large-scale function calling—**Agentica is ready.**
+
+The era of “one agent per company” is just beginning. And Wrtn Labs is leading the way.
