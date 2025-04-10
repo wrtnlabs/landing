@@ -7,7 +7,7 @@ const FOOTER_CONTENTS = [
   {
     title: "Company",
     links: [
-      { label: "About us", href: "https://wrtnlabs.io/about/" },
+      { label: "About us", href: "/about" },
       { label: "Blog", href: "/blog" },
       // MEMO: Toast 팝업
       { label: "Agent OS", href: "/", onClick: () => { } },
