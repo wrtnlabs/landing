@@ -2,7 +2,7 @@ export const ROADMAP = [
   {
     title: "Wrtn\nAgent OS",
     keywords: ["Builder", "Marketplace", "Management"],
-    className: "from-[#00B39E] to-[#ACF7EC]",
+    className: "from-[#00B39E] to-[#ACF7EC] text-[#053337]",
     itemClassName: { container: "bg-white", dot: "bg-[#16EDC9]" },
   },
   {

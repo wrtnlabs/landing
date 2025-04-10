@@ -1,4 +1,5 @@
 "use client";
+
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { AGENT_OS } from '@/app/_constants/agent-os';
 import { Mousewheel } from 'swiper/modules';
@@ -8,7 +9,7 @@ import clsx from 'clsx';
 
 import 'swiper/css';
 
-export default function AgentOS() {
+export default function Service() {
     const [activeIndex, setActiveIndex] = useState(0);
     const swiperRef = useRef<SwiperClass>(null);
 
@@ -19,7 +20,7 @@ export default function AgentOS() {
     const tabList = AGENT_OS.map(({ title }) => title)
 
     return (
-        <div className="max-w-screen flex flex-col gap-6 items-center text-center">
+        <div className="max-w-screen flex flex-col gap-6 items-center text-center px-4">
             <h2 className="text-[32px] text-[#071414] md:text-5xl md:whitespace-pre-line">
                 {"Turn Conversations\ninto Conversions"}
             </h2>
@@ -36,7 +37,7 @@ export default function AgentOS() {
                             key={key}
                             value={key}
                             onClick={() => handleTabClick(i)}
-                            className={clsx("py-3.5 px-6 rounded-full", activeIndex === i ? "bg-[#071511] text-[#E6FDFC]" : "text-[#071511]")}
+                            className={clsx("py-3.5 px-6 rounded-full", activeIndex === i ? "bg-[#071511] text-[#E6FDFC]!" : "text-[#071511]!")}
                         >
                             {key}
                         </TabsTrigger>
@@ -44,7 +45,32 @@ export default function AgentOS() {
                 </TabsList>
             </Tabs>
 
-            <div>
+            {/* List */}
+            <div className='md:hidden flex flex-col gap-5'>
+                {AGENT_OS.map(({ title, heading, description, video }, i) => (
+                    <div key={i} className='bg-[#F7F7F4] flex flex-col rounded-[20px] gap-10 px-3.5 py-3.5'>
+                        <div className='text-left flex flex-col gap-4 mx-8 mt-12'>
+                            <p className='text-base text-[#071511]'>{title}</p>
+                            <h3 className="text-[28px] text-[#071511] whitespace-pre-line">{heading}</h3>
+                            <p className="text-base text-[#071511]">{description}</p>
+                        </div>
+                        <div className="w-full aspect-square rounded-md overflow-hidden">
+                            <video
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="w-full h-full object-cover"
+                                preload="none"
+                                src={video}
+                            />
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* Carousel */}
+            <div className='hidden md:block'>
                 <Swiper
                     modules={[Mousewheel]}
                     onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -54,7 +80,7 @@ export default function AgentOS() {
                     loop
                     mousewheel={{ forceToAxis: true }}
                     onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                    className="hidden md:block w-screen"
+                    className="w-screen"
                 >
                     {AGENT_OS.map(({ title, heading, description, video }, i) => (
                         <SwiperSlide key={i} className={clsx(

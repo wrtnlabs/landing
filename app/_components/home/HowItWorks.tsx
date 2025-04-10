@@ -1,6 +1,9 @@
+"use client";
+
 import { ArrowRightIcon } from "lucide-react";
 import { Button } from "../common/button";
 import Image from "next/image";
+import { openToast } from "../common/toast";
 
 export default function HowItWorks() {
     return (
@@ -14,10 +17,10 @@ export default function HowItWorks() {
                     "Using Wrtn Agent OS, you can easily create and share your own AI apps and agents\nthrough natural language input and a no-code interface, even without any knowledge of development."
                 }
             </p>
-            <Button variant="secondary" className="w-fit">
-                Our Products <ArrowRightIcon strokeWidth={1.5} size={20} />
+            <Button variant="secondary" className="w-fit" onClick={openToast}>
+                Agent OS <ArrowRightIcon strokeWidth={1.5} size={20} />
             </Button>
-            <div className="relative aspect-3/1 w-full cursor-pointer overflow-hidden rounded-3xl">
+            <div className="relative aspect-3/1 w-full cursor-pointer overflow-hidden min-h-[300px] rounded-3xl">
                 <Image
                     src="/landing/images/main_2.png"
                     alt="thumbnail"
