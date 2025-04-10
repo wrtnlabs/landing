@@ -20,6 +20,7 @@ export default async function BlogList() {
 
         <div className="flex flex-col items-center gap-3">
           {posts.map(({ frontMatter, route }) => {
+            if (!frontMatter) return null;
             const { title, date, tags, author } = frontMatter;
             return (
               <Link
