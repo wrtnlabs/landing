@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function OpenSource() {
     return (
-        <div className="flex flex-col items-center max-h-screen gap-20">
+        <div className="flex flex-col items-center md:max-h-screen gap-20">
             <div className="flex flex-col gap-6 text-center items-center">
                 <h2 className="text-[32px] text-[#071414] md:text-5xl md:whitespace-pre-line">
                     {"Based on powerful\nOpen Source Ecosystem"}
@@ -24,8 +24,8 @@ export default function OpenSource() {
 
             <div className="grid md:grid-cols-2 gap-7 max-w-[1440px] w-full">
                 {OPEN_SOURCE.map(({ title, description, image, link }) => (
-                    <Link key={link} href={link} target="_blank" className="bg-[#000000] flex justify-between items-center pl-14">
-                        <div className="flex flex-col gap-2 text-left">
+                    <Link key={link} href={link} target="_blank" className="bg-[#000000] flex flex-col md:flex-row justify-between items-center pt-24 px-12 pb-16 md:p-0 md:pl-14">
+                        <div className="flex flex-col gap-2 text-left w-full">
                             <h4 className="text-3xl text-white">{title}</h4>
                             <p className="text-base text-[#A3A3A3] whitespace-pre-line">{description}</p>
                         </div>
