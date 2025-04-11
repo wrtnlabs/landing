@@ -8,8 +8,8 @@ const withNextra = nextra({
 export default withNextra({
   // ... Other Next.js config options
   output: "export",
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+  // assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
+  // basePath: process.env.NEXT_PUBLIC_BASE_PATH,
   trailingSlash: true,
   images: {
     unoptimized: true,
