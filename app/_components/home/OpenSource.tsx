@@ -41,15 +41,19 @@ export default function OpenSource() {
             key={link}
             href={link}
             target="_blank"
-            className="group relative flex h-[218px] items-center justify-between overflow-hidden rounded-[28px] bg-[#FFFFFF] px-5 transition-all duration-300 hover:bg-[#181818] md:flex-row md:px-14"
+            className="group relative flex h-[218px] items-center justify-between overflow-hidden rounded-[28px] bg-[#FFFFFF] px-5 transition-all duration-300 md:flex-row md:px-14"
           >
-            <Image
-              src={image}
-              alt={title}
-              width={436}
-              height={436}
-              className="absolute top-0 left-[50%] hidden -translate-x-1/2 transition-all duration-300 group-hover:block"
-            />
+            <div className="absolute flex w-full justify-center top-0 opacity-0 left-0 h-full bg-[#000000] overflow-hidden transition-all duration-500 group-hover:opacity-100">
+              <Image
+                src={image}
+                alt={title}
+                width={436}
+                height={436}
+                className="h-[436px] w-[436px] object-cover"
+              />
+            </div>
+
+            <div className="absolute top-0 left-0 w-full h-[436px] transition-all bg-[linear-gradient(180deg,_#18181B_0%,_rgba(24,24,27,0)_123.45%)] duration-500 opacity-0 group-hover:opacity-100" />
 
             <div className="z-10 flex w-full flex-col gap-2 text-left">
               <h4 className="text-3xl text-[#000000] transition-all duration-300 group-hover:text-white">
