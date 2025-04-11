@@ -14,7 +14,7 @@ export default function Welcome() {
 
       <div className="max-x-[1440px] aspect-[1.7/1] px-20">
         <video
-          src="/landing/videos/main_bg.mp4"
+          src="/videos/main_bg.mp4"
           muted
           loop
           autoPlay
