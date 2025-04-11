@@ -9,6 +9,7 @@ export default withNextra({
   // ... Other Next.js config options
   output: "export",
   assetPrefix: "/landing",
+  basePath: "/landing",
   trailingSlash: true,
   images: {
     unoptimized: true,
