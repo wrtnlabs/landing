@@ -31,7 +31,7 @@ export default function OpenSource() {
           playsInline
           className="h-full w-full object-cover"
           preload="none"
-          src={"/landing/videos/agent.mp4"}
+          src={"/videos/agent.mp4"}
         />
       </div>
 

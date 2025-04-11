@@ -11,7 +11,7 @@ export default function Header() {
       <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between">
         <Link href="/">
           <Image
-            src="/landing/images/logo-black.svg"
+            src="/images/logo-black.svg"
             alt="logo"
             width={120}
             height={28}
