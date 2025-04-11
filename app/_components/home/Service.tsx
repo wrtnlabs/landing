@@ -6,7 +6,7 @@ import { Mousewheel } from "swiper/modules";
 import { useRef, useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "../common/tabs";
 import clsx from "clsx";
-
+import { addBasePath } from "@/app/_lib/add-base-path";
 import "swiper/css";
 
 export default function Service() {
@@ -72,7 +72,7 @@ export default function Service() {
                 playsInline
                 className="h-full w-full object-cover"
                 preload="none"
-                src={video}
+                src={addBasePath(video)}
               />
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function Service() {
                     playsInline
                     className="h-full w-full object-cover"
                     preload="none"
-                    src={video}
+                    src={addBasePath(video)}
                   />
                 </div>
               </div>

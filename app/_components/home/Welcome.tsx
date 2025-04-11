@@ -1,3 +1,5 @@
+import { addBasePath } from "@/app/_lib/add-base-path";
+
 export default function Welcome() {
   return (
     <section className="flex flex-col gap-24 pt-40">
@@ -14,7 +16,7 @@ export default function Welcome() {
 
       <div className="max-x-[1440px] aspect-[1.7/1] px-20">
         <video
-          src="/videos/main_bg.mp4"
+          src={addBasePath("/videos/main_bg.mp4")}
           muted
           loop
           autoPlay

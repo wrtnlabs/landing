@@ -4,14 +4,14 @@ import Link from "next/link";
 import { Button } from "../common/button";
 import Image from "next/image";
 import { openToast } from "../common/toast";
-
+import { addBasePath } from "@/app/_lib/add-base-path";
 export default function Header() {
   return (
     <header className="fixed top-0 z-50 flex h-[70px] w-full items-center justify-between px-4 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between">
         <Link href="/">
           <Image
-            src="/images/logo-black.svg"
+            src={addBasePath("/images/logo-black.svg")}
             alt="logo"
             width={120}
             height={28}

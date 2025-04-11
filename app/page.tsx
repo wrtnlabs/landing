@@ -6,10 +6,9 @@ import Service from "./_components/home/Service";
 import OpenSource from "./_components/home/OpenSource";
 import Banner from "./_components/common/Banner";
 
-
 export default function Home() {
   return (
-    <div className="flex flex-col gap-20 items-center bg-white">
+    <div className="flex flex-col items-center gap-20 bg-white">
       <Welcome />
       <HowItWorks />
       <Service />

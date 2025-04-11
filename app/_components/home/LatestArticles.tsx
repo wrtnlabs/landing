@@ -3,41 +3,61 @@ import { getPosts } from "@/app/_lib/getPost";
 import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { addBasePath } from "@/app/_lib/add-base-path";
 export default async function LatestArticles() {
-    const posts = await getPosts();
+  const posts = await getPosts();
 
-    return (
-        <div className="w-full flex flex-col gap-10 px-4 md:px-10 py-40 md:max-h-screen max-w-[1440px] mx-auto">
-            <div className="flex items-center justify-between">
-                <h3 className="text-[32px] text-[#071414]">Latest articles</h3>
-                <Link href="/blog" className="flex items-center gap-7 text-[#002424]">
-                    View All <ArrowRightIcon size={24} />
-                </Link>
-            </div>
+  return (
+    <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-10 px-4 py-40 md:max-h-screen md:px-10">
+      <div className="flex items-center justify-between">
+        <h3 className="text-[32px] text-[#071414]">Latest articles</h3>
+        <Link href="/blog" className="flex items-center gap-7 text-[#002424]">
+          View All <ArrowRightIcon size={24} />
+        </Link>
+      </div>
 
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-4 w-full">
-                {posts.map(({ frontMatter, route }, i) => {
-                    if (!frontMatter) return null;
-                    const { title, date, tags, thumbnail } = frontMatter;
-                    return (
-                        <Link href={`/blog${route}`} key={i} className="flex w-full gap-8 md:gap-0 flex-col justify-between md:h-[395px] pb-2.5 border-b border-[#E3E3E3] cursor-pointer group">
-                            <div className="flex flex-col gap-6">
-                                <div className="relative w-full aspect-video overflow-hidden">
-                                    <Image src={thumbnail} alt="thumbnail" fill objectFit="cover" className="group-hover:scale-105 duration-300" />
-                                </div>
-                                <div className="flex gap-1">{tags.map((tag: string) => <div key={tag} className="py-1 px-2 bg-gray-200 rounded-sm text-sm text-black">{tag}</div>)}</div>
-                                <h4 className="text-lg text-[#002424]">{title}</h4>
-                            </div>
-                            <div className="text-sm">
-                                <span className="text-[#8B8B8B]">{formatDate(date)} | </span>
-                                <span className="text-black font-medium">{daysAgo(date)} DAYS AGO</span>
-                            </div>
-                        </Link>
-                    )
-                })}
-            </div>
-        </div>
-
-    )
+      <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-4">
+        {posts.map(({ frontMatter, route }, i) => {
+          if (!frontMatter) return null;
+          const { title, date, tags, thumbnail } = frontMatter;
+          return (
+            <Link
+              href={`/blog${route}`}
+              key={i}
+              className="group flex w-full cursor-pointer flex-col justify-between gap-8 border-b border-[#E3E3E3] pb-2.5 md:h-[395px] md:gap-0"
+            >
+              <div className="flex flex-col gap-6">
+                <div className="relative aspect-video w-full overflow-hidden">
+                  <Image
+                    src={addBasePath(thumbnail)}
+                    alt="thumbnail"
+                    fill
+                    objectFit="cover"
+                    className="duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex gap-1">
+                  {tags.map((tag: string) => (
+                    <div
+                      key={tag}
+                      className="rounded-sm bg-gray-200 px-2 py-1 text-sm text-black"
+                    >
+                      {tag}
+                    </div>
+                  ))}
+                </div>
+                <h4 className="text-lg text-[#002424]">{title}</h4>
+              </div>
+              <div className="text-sm">
+                <span className="text-[#8B8B8B]">{formatDate(date)} | </span>
+                <span className="font-medium text-black">
+                  {daysAgo(date)} DAYS AGO
+                </span>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
 }

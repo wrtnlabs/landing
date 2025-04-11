@@ -3,7 +3,7 @@ import { Button } from "../common/button";
 import { OPEN_SOURCE } from "@/app/_constants/open-source";
 import Link from "next/link";
 import Image from "next/image";
-
+import { addBasePath } from "@/app/_lib/add-base-path";
 export default function OpenSource() {
   return (
     <div className="flex flex-col items-center gap-20 md:max-h-screen">
@@ -31,7 +31,7 @@ export default function OpenSource() {
           playsInline
           className="h-full w-full object-cover"
           preload="none"
-          src={"/videos/agent.mp4"}
+          src={addBasePath("/videos/agent.mp4")}
         />
       </div>
 
@@ -43,9 +43,9 @@ export default function OpenSource() {
             target="_blank"
             className="group relative flex h-[218px] items-center justify-between overflow-hidden rounded-[28px] bg-[#FFFFFF] px-5 transition-all duration-300 md:flex-row md:px-14"
           >
-            <div className="absolute flex w-full justify-center top-0 opacity-0 left-0 h-full bg-[#000000] overflow-hidden transition-all duration-500 group-hover:opacity-100">
+            <div className="absolute top-0 left-0 flex h-full w-full justify-center overflow-hidden bg-[#000000] opacity-0 transition-all duration-500 group-hover:opacity-100">
               <Image
-                src={image}
+                src={addBasePath(image)}
                 alt={title}
                 width={436}
                 height={436}
@@ -53,7 +53,7 @@ export default function OpenSource() {
               />
             </div>
 
-            <div className="absolute top-0 left-0 w-full h-[436px] transition-all bg-[linear-gradient(180deg,_#18181B_0%,_rgba(24,24,27,0)_123.45%)] duration-500 opacity-0 group-hover:opacity-100" />
+            <div className="absolute top-0 left-0 h-[436px] w-full bg-[linear-gradient(180deg,_#18181B_0%,_rgba(24,24,27,0)_123.45%)] opacity-0 transition-all duration-500 group-hover:opacity-100" />
 
             <div className="z-10 flex w-full flex-col gap-2 text-left">
               <h4 className="text-3xl text-[#000000] transition-all duration-300 group-hover:text-white">

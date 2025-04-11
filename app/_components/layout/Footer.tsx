@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { openToast } from "../common/toast";
-
+import { addBasePath } from "@/app/_lib/add-base-path";
 const FOOTER_CONTENTS = [
   {
     title: "Company",
@@ -33,7 +33,7 @@ export default function Footer() {
     <footer className="grid grid-cols-2 bg-zinc-900 px-4 py-32 md:h-[484px] md:grid-cols-4 md:px-16 md:pt-24 md:pb-10">
       <div className="hidden h-full flex-col justify-between md:flex">
         <Image
-          src="/images/logo-white.svg"
+          src={addBasePath("/images/logo-white.svg")}
           alt="logo"
           width={121}
           height={28}
