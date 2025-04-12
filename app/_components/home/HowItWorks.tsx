@@ -9,8 +9,8 @@ import { addBasePath } from "@/app/_lib/add-base-path";
 export default function HowItWorks() {
   return (
     <section className="flex w-full max-w-[1440px] flex-col gap-5 px-4 py-24 text-[#002424] md:px-8 md:py-40">
-      <p className="text-base">How it works</p>
-      <h2 className="text-[40px] whitespace-pre-line md:text-[48px]">
+      <p className="text-base">Coming soon</p>
+      <h2 className="font-oceanic text-[40px] whitespace-pre-line md:text-[48px]">
         {"Unchain your potential\nwith Wrtn Agent OS"}
       </h2>
       <p className="text-base whitespace-pre-line">
@@ -21,9 +21,9 @@ export default function HowItWorks() {
       <Button variant="secondary" className="w-fit" onClick={openToast}>
         Agent OS <ArrowRightIcon strokeWidth={1.5} size={20} />
       </Button>
-      <div className="relative aspect-3/1 min-h-[300px] w-full cursor-pointer overflow-hidden rounded-3xl">
+      <div className="relative aspect-72/31 min-h-[300px] w-full cursor-pointer overflow-hidden rounded-3xl">
         <Image
-          src={addBasePath("/images/main_2.png")}
+          src={addBasePath("/images/main.png")}
           alt="thumbnail"
           fill
           objectFit="cover"

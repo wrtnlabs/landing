@@ -20,8 +20,8 @@ export default function Service() {
   const tabList = AGENT_OS.map(({ title }) => title);
 
   return (
-    <div className="flex max-w-screen flex-col items-center gap-6 px-4 text-center">
-      <h2 className="text-[32px] text-[#071414] md:text-5xl md:whitespace-pre-line">
+    <div className="flex max-w-screen flex-col items-center gap-6 px-4 pb-52 text-center">
+      <h2 className="font-oceanic text-[32px] text-[#071414] md:text-5xl md:whitespace-pre-line">
         {"Turn Conversations\ninto Conversions"}
       </h2>
       <p className="text-base text-[#767676] md:text-lg md:whitespace-pre-line">
