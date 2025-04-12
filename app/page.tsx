@@ -8,7 +8,7 @@ import Banner from "./_components/common/Banner";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center gap-20 bg-white">
+    <div className="flex flex-col items-center bg-white">
       <Welcome />
       <HowItWorks />
       <Service />

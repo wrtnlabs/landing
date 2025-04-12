@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { openToast } from "../common/toast";
 import { addBasePath } from "@/app/_lib/add-base-path";
+
 const FOOTER_CONTENTS = [
   {
     title: "Company",
@@ -21,16 +22,17 @@ const FOOTER_CONTENTS = [
       { label: "Autoview", href: "https://wrtnlabs.io/autoview" },
       { label: "Github", href: "https://github.com/wrtnlabs" },
       { label: "Docs", href: "https://wrtnlabs.io/agentica/docs" },
+      { label: "Discord", href: "https://discord.gg/aMhRmzkqCx" },
     ],
   },
 ];
 
 export default function Footer() {
   const linkClassName =
-    "cursor-pointer relative w-fit text-lg! text-zinc-500 hover:text-zinc-100 before:invisible before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-left before:scale-x-0 before:bg-zinc-100 before:transition-transform before:duration-250 before:ease-linear before:content-[''] hover:before:visible hover:before:scale-x-100 md:text-[21px]";
+    "cursor-pointer relative w-fit text-lg! text-[#6D8786] hover:text-zinc-100 before:invisible before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-left before:scale-x-0 before:bg-zinc-100 before:transition-transform before:duration-250 before:ease-linear before:content-[''] hover:before:visible hover:before:scale-x-100 md:text-[21px]";
 
   return (
-    <footer className="grid grid-cols-2 bg-zinc-900 px-4 py-32 md:h-[484px] md:grid-cols-4 md:px-16 md:pt-24 md:pb-10">
+    <footer className="grid grid-cols-2 bg-[#071511] px-4 py-32 md:h-[484px] md:grid-cols-4 md:px-16 md:pt-24 md:pb-10">
       <div className="hidden h-full flex-col justify-between md:flex">
         <Image
           src={addBasePath("/images/logo-white.svg")}
@@ -38,11 +40,11 @@ export default function Footer() {
           width={121}
           height={28}
         />
-        <p className="text-sm text-zinc-600">© 2025 Wrtn Labs</p>
+        <p className="text-sm text-[#6D8786]">© 2025 Wrtn Labs</p>
       </div>
       <div className="hidden md:block" />
       {FOOTER_CONTENTS.map(({ title, links }) => (
-        <nav key={title} className="flex flex-col gap-6 md:gap-3 md:pl-6">
+        <nav key={title} className="flex flex-col gap-6 md:gap-6 md:pl-6">
           <p className="text-sm text-gray-50 md:text-lg">{title}</p>
           <div className="flex flex-col gap-6">
             {links.map(({ label, href, onClick }) => {
