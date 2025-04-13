@@ -5,17 +5,21 @@ import Roadmap from "./_components/home/Roadmap";
 import Service from "./_components/home/Service";
 import OpenSource from "./_components/home/OpenSource";
 import Banner from "./_components/common/Banner";
+import Header from "./_components/layout/Header";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center bg-white">
-      <Welcome />
-      <HowItWorks />
-      <Service />
-      <OpenSource />
-      <Roadmap />
-      <LatestArticles />
-      <Banner />
-    </div>
+    <>
+      <Header />
+      <div className="flex flex-col items-center bg-white">
+        <Welcome />
+        <HowItWorks />
+        <Service />
+        <OpenSource />
+        <Roadmap />
+        <LatestArticles />
+        <Banner />
+      </div>
+    </>
   );
 }

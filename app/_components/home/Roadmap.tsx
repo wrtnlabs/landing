@@ -28,13 +28,13 @@ export default function Roadmap() {
           </Link>
         </div>
 
-        <div className="flex w-full flex-col gap-4 drop-shadow-[0_0_100px_rgba(134,255,217,0.40)] md:w-auto">
+        <div className="flex w-full max-w-[646px] flex-col gap-4 drop-shadow-[0_0_100px_rgba(134,255,217,0.40)] md:w-auto">
           {ROADMAP.map(({ title, keywords, className, itemClassName }) => (
             <div
               key={title}
               className={`flex w-full flex-row gap-2 rounded-2xl p-3.5 md:w-[646px] md:rounded-[20px] overflow-scroll ${className}`}
             >
-              <h3 className="flex items-center flex-1 justify-center text-center text-lg md:text-[22px] whitespace-pre-line">
+              <h3 className="flex items-center min-w-32 flex-1 justify-center text-center text-lg md:text-[22px] whitespace-pre-line">
                 {title}
               </h3>
               <div className="flex flex-row gap-2">

@@ -28,7 +28,7 @@ export default async function BlogDetailPage(props: any) {
   if (Object.keys(params).length === 0) return <BlogList />;
 
   return (
-    <Layout nextThemes={{ forcedTheme: "dark" }}>
+    <Layout>
       <div className="pt-20">
         <Wrapper toc={toc} metadata={filteredMetadata}>
           <MDXContent {...props} params={params} />
