@@ -2,7 +2,6 @@
 import { Head } from "nextra/components";
 import type { Metadata } from "next";
 import Footer from "./_components/layout/Footer";
-import Header from "./_components/layout/Header";
 import ToastProvider from "./_providers/ToastProvider";
 import "./globals.css";
 
