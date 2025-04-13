@@ -15,14 +15,13 @@ export default function Welcome() {
       </div>
 
       <div className="max-x-[1440px] aspect-[1.7/1]">
-        {/* TODO: video */}
-        {/* <video
-          src={addBasePath("/videos/preview.mp4")}
+        <video
+          src="https://studio-pro-fe.s3.ap-northeast-2.amazonaws.com/preview.mp4"
           muted
           loop
           autoPlay
           className="w-full rounded-3xl"
-        /> */}
+        />
       </div>
     </section>
   );
