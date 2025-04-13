@@ -14,7 +14,7 @@ export default async function LatestArticles() {
     <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-10 px-4 py-40 md:max-h-screen md:px-10">
       <div className="flex items-center justify-between">
         <h3 className="text-[32px] text-[#071414]">Latest articles</h3>
-        <Link href="/blog" className="flex items-center gap-7 text-[#002424]">
+        <Link href="/blog" target="_blank" className="flex items-center gap-7 text-[#002424]">
           View All <ArrowRightIcon size={24} />
         </Link>
       </div>
