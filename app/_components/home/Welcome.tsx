@@ -15,9 +15,14 @@ export default function Welcome() {
       <div className="max-x-[1440px] aspect-[1.7/1]">
         <video
           src="https://studio-pro-fe.s3.ap-northeast-2.amazonaws.com/preview.mp4"
-          muted
-          loop
           autoPlay
+          loop
+          muted
+          controls
+          controlsList="nodownload"
+          disablePictureInPicture
+          playsInline
+          preload="auto"
           className="w-full rounded-3xl"
         />
       </div>

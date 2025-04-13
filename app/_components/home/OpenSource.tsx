@@ -34,7 +34,7 @@ export default function OpenSource() {
           disablePictureInPicture
           playsInline
           className="h-full w-full object-cover"
-          preload="none"
+          preload="auto"
           src={addBasePath("/videos/open-source.MP4")}
         />
       </div>
