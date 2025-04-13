@@ -12,7 +12,7 @@ export default function Roadmap() {
           <h2 className="font-oceanic text-[40px] leading-[46px] whitespace-pre-line text-[#E6FDFC]">
             {"Built from the ground up\nfor every layer of AI Agents"}
           </h2>
-          <p className="text-lg whitespace-pre-line text-[#A7B4B3]">
+          <p className="text-lg md:whitespace-pre-line text-[#A7B4B3]">
             {
               "Agent OS lets you seamlessly build, deploy, manage, and host AI agents\nusing Agentica and open-source libraries—while integrating powerful AI\ntools and enabling LLMs to take action in apps."
             }

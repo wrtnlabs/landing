@@ -7,7 +7,7 @@ import { addBasePath } from "@/app/_lib/add-base-path";
 
 export default function OpenSource() {
   return (
-    <div className="flex w-full flex-col bg-black items-center gap-20 pb-[100px] pt-[200px] md:pb-0 px-8">
+    <div className="flex w-full flex-col bg-black items-center gap-20 pb-[100px] pt-[200px] px-4 md:pb-0 md:px-8">
       <div className="flex flex-col md:items-center md:text-center gap-6">
         <h2 className="font-oceanic text-[40px] leading-[46px] text-[#E6FDFC] md:whitespace-pre-line">
           {"Based on powerful\nOpen Source Ecosystem"}
