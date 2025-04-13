@@ -9,7 +9,7 @@ export default function Roadmap() {
       <div className="flex w-full max-w-[1440px] flex-col items-center justify-between gap-6 md:flex-row">
         <div className="flex flex-col gap-6">
           <p className="text-base text-[#E6FDFC]">Roadmap</p>
-          <h2 className="font-oceanic text-5xl whitespace-pre-line text-[#E6FDFC]">
+          <h2 className="font-oceanic text-[40px] leading-[46px] whitespace-pre-line text-[#E6FDFC]">
             {"Built from the ground up\nfor every layer of AI Agents"}
           </h2>
           <p className="text-lg whitespace-pre-line text-[#A7B4B3]">
@@ -28,7 +28,7 @@ export default function Roadmap() {
           </Link>
         </div>
 
-        <div className="flex w-full flex-col gap-4 md:w-auto">
+        <div className="flex w-full flex-col gap-4 drop-shadow-[0_0_100px_rgba(134,255,217,0.40)] md:w-auto">
           {ROADMAP.map(({ title, keywords, className, itemClassName }) => (
             <div
               key={title}
