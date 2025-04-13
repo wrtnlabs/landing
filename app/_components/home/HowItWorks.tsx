@@ -13,7 +13,7 @@ export default function HowItWorks() {
       <h2 className="font-oceanic text-[40px] leading-[46px] whitespace-pre-line md:text-[48px] md:leading-[56px] ">
         {"Unchain your potential\nwith Wrtn Agent OS"}
       </h2>
-      <p className="text-base whitespace-pre-line">
+      <p className="text-base leading-6 md:whitespace-pre-line text-[#767676]">
         {
           "Using Wrtn Agent OS, you can easily create and share your own AI apps and agents\nthrough natural language input and a no-code interface, even without any knowledge of development."
         }
