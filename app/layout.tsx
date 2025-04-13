@@ -21,7 +21,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <Head />
       <body>
-        <Header />
         <main>{children}</main>
         <Footer />
         <ToastProvider />
