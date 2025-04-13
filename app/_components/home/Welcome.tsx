@@ -1,5 +1,3 @@
-import { addBasePath } from "@/app/_lib/add-base-path";
-
 export default function Welcome() {
   return (
     <section className="flex flex-col gap-24 pt-40 px-8 md:px-40">
