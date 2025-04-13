@@ -25,7 +25,6 @@ export default async function BlogList() {
             return (
               <Link
                 href={`/blog${route}`}
-                target="_blank"
                 key={route}
                 className="group flex w-full hover:bg-black/10 dark:hover:bg-white/20 duration-300 transition-all cursor-pointer flex-col gap-2 rounded-xl border-gray-700 p-4"
               >
