@@ -9,7 +9,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Wrtnlabs",
-  description: "Wrtnlabs Landing Page",
+  description: "The Foundation for Every Business Agent",
 };
 
 export default function RootLayout({
