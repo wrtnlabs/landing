@@ -7,9 +7,9 @@ import { addBasePath } from "@/app/_lib/add-base-path";
 
 export default function OpenSource() {
   return (
-    <div className="flex flex-col bg-black items-center gap-20 pt-[200px]">
-      <div className="flex flex-col items-center gap-6 text-center">
-        <h2 className="font-oceanic text-[32px] text-[#E6FDFC] md:text-5xl md:whitespace-pre-line">
+    <div className="flex w-full flex-col bg-black items-center gap-20 pb-[100px] pt-[200px] md:pb-0 px-8">
+      <div className="flex flex-col md:items-center md:text-center gap-6">
+        <h2 className="font-oceanic text-[40px] leading-[46px] text-[#E6FDFC] md:whitespace-pre-line">
           {"Based on powerful\nOpen Source Ecosystem"}
         </h2>
         <p className="text-base text-[#BEBEBE] md:text-lg md:whitespace-pre-line">
@@ -29,9 +29,12 @@ export default function OpenSource() {
           autoPlay
           loop
           muted
+          controls
+          controlsList="nodownload"
+          disablePictureInPicture
           playsInline
           className="h-full w-full object-cover"
-          preload="none"
+          preload="auto"
           src={addBasePath("/videos/open-source.MP4")}
         />
       </div>

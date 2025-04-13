@@ -10,7 +10,7 @@ export default function HowItWorks() {
   return (
     <section className="flex w-full max-w-[1440px] flex-col gap-5 px-4 py-24 text-[#002424] md:px-8 md:py-40">
       <p className="text-base">Coming soon</p>
-      <h2 className="font-oceanic text-[40px] whitespace-pre-line md:text-[48px]">
+      <h2 className="font-oceanic text-[40px] leading-[46px] whitespace-pre-line md:text-[48px] md:leading-[56px] ">
         {"Unchain your potential\nwith Wrtn Agent OS"}
       </h2>
       <p className="text-base whitespace-pre-line">

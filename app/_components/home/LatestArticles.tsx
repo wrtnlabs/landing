@@ -43,7 +43,7 @@ export default async function LatestArticles() {
                   {tags.map((tag: string) => (
                     <div
                       key={tag}
-                      className="rounded-sm bg-gray-200 px-2 py-1 text-sm text-black"
+                      className="rounded-sm bg-[#ECF9F3] px-2 py-1 text-sm text-[#002424]"
                     >
                       {tag}
                     </div>
