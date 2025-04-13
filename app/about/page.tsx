@@ -11,7 +11,7 @@ export default function About() {
     <div className="bg-white pt-40">
       <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-60 px-[16px] md:px-[24px]">
         <div className="flex flex-col md:flex-row">
-          <h1 className="text-5xl md:w-1/4 md:text-6xl">About</h1>
+          <h1 className="text-5xl md:w-1/4 md:text-6xl font-oceanic">About</h1>
           <div className="md:w-3/4">
             <h2 className="mt-[16px] text-3xl text-[#071511] md:text-4xl">
               Open Platform for Agents in Business

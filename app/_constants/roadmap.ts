@@ -2,19 +2,19 @@ export const ROADMAP = [
   {
     title: "Wrtn\nAgent OS",
     keywords: ["Builder", "Marketplace", "Management"],
-    className: "from-[#00B39E] to-[#ACF7EC] text-[#053337]",
-    itemClassName: { container: "bg-white", dot: "bg-[#16EDC9]" },
+    className: "bg-[#E6FDFC] text-[#053337]",
+    itemClassName: "from-[#FFFFFF] to-[#E8FFFD]",
   },
   {
     title: "Open Sources\nLibraries",
     keywords: ["Autoview", "Connectors", "RAG"],
-    className: "from-[#063D41] to-[#0C838D] text-[#B8F7EF]",
-    itemClassName: { container: "bg-[#06454A]", dot: "bg-[#16EDC9]" },
+    className: "bg-[#B8F7EF] text-[#051D1D]",
+    itemClassName: "from-[#FFFFFF] to-[#B8F7EF]",
   },
   {
     title: "Agent\nArchitecture",
     keywords: ["Compiler", "LLM Function Calling", "Orchestration"],
-    className: "from-[#022B2C] to-[#04454A] text-[#B8F7EF]",
-    itemClassName: { container: "bg-black", dot: "bg-[#054347]" },
+    className: "bg-[#86FFD9] text-[#071511]",
+    itemClassName: "from-[#F0FFFF] to-[#72F9CF]",
   },
 ];

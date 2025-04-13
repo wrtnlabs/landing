@@ -1,21 +1,21 @@
 import { getPosts } from "@/app/_lib/getPost";
-//import { getTags } from "@/app/_lib/getTags";
+// import { getTags } from "@/app/_lib/getTags";
 import Link from "next/link";
 
 export default async function BlogList() {
   const posts = await getPosts();
-  //const allTags = await getTags();
-  //const tags = [...new Set(allTags)];
+  // const allTags = await getTags();
+  // const tags = [...new Set(allTags)].filter((tag) => tag !== undefined);
 
   return (
     <div className="pt-20 min-h-screen bg-black px-4">
       <div className="max-w-2xl mx-auto flex-col gap-6 flex">
-        <h1 className="text-3xl text-white">Blog</h1>
+        <h1 className="text-3xl text-white font-oceanic">Blog</h1>
 
         {/* Todo: Category Tag */}
         {/* <div className="flex w-full flex-wrap gap-2">
           <div className="w-fit rounded-full cursor-pointer bg-gray-100 px-2 py-1 text-sm text-gray-900 min-w-10 text-center">All</div>
-          {tags?.map((tag) => <div key={tag} className="w-fit rounded-full cursor-pointer bg-gray-100 px-2 py-1 text-sm text-gray-900">{tag}</div>)}
+          {tags?.map((tag, i) => <div key={tag + i} className="w-fit rounded-full cursor-pointer bg-gray-100 px-2 py-1 text-sm text-gray-900">{tag}</div>)}
         </div> */}
 
         <div className="flex flex-col items-center gap-3">

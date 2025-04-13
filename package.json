@@ -2,7 +2,7 @@
   "name": "wrtnlabs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wrtnlabs.github.io/landing",
+  "homepage": "https://wrtnlabs.github.io",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

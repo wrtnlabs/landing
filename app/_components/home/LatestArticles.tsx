@@ -4,8 +4,11 @@ import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { addBasePath } from "@/app/_lib/add-base-path";
+
+
 export default async function LatestArticles() {
   const posts = await getPosts();
+  const viewPosts = posts.filter(({ name }) => ["the-journey-of-building-a-cs-refund-agent", "meet-our-new-member"].includes(name));
 
   return (
     <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-10 px-4 py-40 md:max-h-screen md:px-10">
@@ -17,7 +20,7 @@ export default async function LatestArticles() {
       </div>
 
       <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-4">
-        {posts.map(({ frontMatter, route }, i) => {
+        {viewPosts.map(({ frontMatter, route }, i) => {
           if (!frontMatter) return null;
           const { title, date, tags, thumbnail } = frontMatter;
           return (

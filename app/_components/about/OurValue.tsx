@@ -45,7 +45,7 @@ export default function OurValue() {
                   <h3 className="mt-4 hidden translate-y-[-20px] transform text-[32px] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 md:block">
                     {title}
                   </h3>
-                  <p className="translate-y-[20px] transform text-lg opacity-0 transition-all duration-300 group-hover:block group-hover:translate-y-0 group-hover:opacity-60 md:mt-auto md:text-xl">
+                  <p className="translate-y-[20px] transform text-sm opacity-0 transition-all duration-300 group-hover:block group-hover:translate-y-0 group-hover:opacity-60 md:mt-auto md:text-xl">
                     {content}
                   </p>
                 </div>
