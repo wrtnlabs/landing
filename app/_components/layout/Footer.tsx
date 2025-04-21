@@ -29,17 +29,19 @@ const FOOTER_CONTENTS = [
 
 export default function Footer() {
   const linkClassName =
-    "cursor-pointer relative w-fit text-lg! text-[#6D8786] hover:text-zinc-100 before:invisible before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-left before:scale-x-0 before:bg-zinc-100 before:transition-transform before:duration-250 before:ease-linear before:content-[''] hover:before:visible hover:before:scale-x-100 md:text-[21px]";
+    "cursor-pointer relative w-fit text-lg! text-[#6D8786] dark:text-[#71717A] hover:text-zinc-100 dark:hover:text-zinc-100 before:invisible before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-left before:scale-x-0 before:bg-zinc-100 before:transition-transform before:duration-250 before:ease-linear before:content-[''] hover:before:visible hover:before:scale-x-100 md:text-[21px]";
 
   return (
-    <footer className="grid grid-cols-2 bg-[#071511] px-4 py-32 md:h-[484px] md:grid-cols-4 md:px-16 md:pt-24 md:pb-10">
+    <footer className="grid grid-cols-2 bg-[#071511] dark:bg-[#18181B] px-4 py-32 md:h-[484px] md:grid-cols-4 md:px-16 md:pt-24 md:pb-10">
       <div className="hidden h-full flex-col justify-between md:flex">
-        <Image
-          src={addBasePath("/images/logo-white.svg")}
-          alt="logo"
-          width={121}
-          height={28}
-        />
+        <Link href="/">
+          <Image
+            src={addBasePath("/images/logo-white.svg")}
+            alt="logo"
+            width={121}
+            height={28}
+          />
+        </Link>
         <p className="text-sm text-[#6D8786]">© 2025 Wrtn Labs</p>
       </div>
       <div className="hidden md:block" />
@@ -63,7 +65,7 @@ export default function Footer() {
                 >
                   {label}
                 </Link>
-              );
+              )
             })}
           </div>
         </nav>
