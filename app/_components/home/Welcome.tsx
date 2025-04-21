@@ -1,6 +1,8 @@
+import Player from "../common/Player";
+
 export default function Welcome() {
   return (
-    <section className="flex flex-col gap-24 pt-40 px-4 md:px-40">
+    <section className="flex w-full flex-col gap-24 pt-40 px-4 md:px-40">
       <div className="flex flex-col items-center justify-center gap-9 text-center">
         <h1 className="font-oceanic text-[32px] leading-[38px] md:whitespace-pre-line text-[#002424] md:text-[64px] md:leading-[69px]">
           {"The Foundation for\nEvery Business Agent"}
@@ -12,18 +14,11 @@ export default function Welcome() {
         </p>
       </div>
 
-      <div className="max-x-[1440px] aspect-[1.7/1]">
-        <video
-          src="https://studio-pro-fe.s3.ap-northeast-2.amazonaws.com/preview.mp4"
-          autoPlay
-          loop
-          muted
-          controls
-          controlsList="nodownload"
-          disablePictureInPicture
-          playsInline
-          preload="auto"
-          className="w-full rounded-3xl"
+      <div className="max-x-[1440px]">
+        <Player
+          url="https://studio-pro-fe.s3.ap-northeast-2.amazonaws.com/preview.mp4"
+          playing={true}
+          muted={true}
         />
       </div>
     </section>

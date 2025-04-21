@@ -7,6 +7,8 @@ author: Owen
 thumbnail: "/contents/meet-our-new-member/thumbnail.png"
 ---
 
+import Player from "@/app/_components/common/Player";
+
 # Introducing New Team Member
 
 ![Member](/contents/meet-our-new-member/1.png)
@@ -33,9 +35,7 @@ But what if we could leverage AI technology to bring the conversational depth an
 
 # Real Thoughts Emerge Through Conversations
 
-<video controls>
-  <source src="/contents/meet-our-new-member/3.mp4" type="video/mp4" />
-</video>
+<Player url="/contents/meet-our-new-member/3.mp4" aspect="square" />
 
 The Wrtn Labs team leveraged [**Agentica**](https://wrtnlabs.io/agentica/) to develop and test an interactive **Interview AI** that dynamically generates follow-up questions based on user responses. The approach involves clearly defining interview goals, the type of information desired, and the insights valuable to the product team. If a user provides a vague or brief response, the AI agent is designed to ask follow-up questions to gather more detailed and relevant information.
 
@@ -47,9 +47,7 @@ Yet, not every user initially provided detailed feedback. Those without specific
 
 # Can AI Really Ask the Right Questions to User?
 
-<video controls>
-  <source src="/contents/meet-our-new-member/4.mov" type="video/mp4" />
-</video>
+<Player url="/contents/meet-our-new-member/4.mov" aspect="square" />
 
 To effectively capture interview objectives and desired information, while dynamically generating appropriate follow-up questions based on user responses, meticulous refinement of the prompts was necessary. We analyzed questions and response patterns from actual face-to-face interviews and reflected various examples of interview guides, primary questions, and potential follow-up questions in the prompts.
 
@@ -61,9 +59,7 @@ Of course, due to the nature of Large Language Models (LLMs), prompts are not re
 
 # Organizing Insights Through AI Agents
 
-<video controls>
-  <source src="/contents/meet-our-new-member/5.mp4" type="video/mp4" />
-</video>
+<Player url="/contents/meet-our-new-member/5.mp4" aspect="square" />
 
 However, unlike structured surveys, conversational data gathered from many users proved challenging to organize clearly. Since insights were recorded conversationally, it was essential to structure them into charts or allow queries to focus on specific data points. Here, Agentica’s core functionality—the Connector—played a pivotal role. Within Agentica, any callable function can be turned into a Connector accessible by the AI agents whenever required. For example, when an Insight Extraction agent received a command such as "Show me user churn complaints," it could invoke a Connector to access records from the Interview agent, retrieve relevant data, and summarize the results clearly in text form. Thus, agents with different purposes and tools could communicate seamlessly to fulfill user requests.
 
