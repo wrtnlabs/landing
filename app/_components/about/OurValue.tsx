@@ -21,7 +21,7 @@ export default function OurValue() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {OUR_VALUE.map((props, i) => <ValueCard {...props} index={i} />)}
+          {OUR_VALUE.map((props, i) => <ValueCard key={i} {...props} index={i} />)}
         </div>
       </div>
 
