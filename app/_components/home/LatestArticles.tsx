@@ -1,13 +1,11 @@
 import { daysAgo, formatDate } from "@/app/_lib/date";
-import { getPosts } from "@/app/_lib/getPost";
 import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { addBasePath } from "@/app/_lib/add-base-path";
+import { Item } from "nextra/normalize-pages";
 
-
-export default async function LatestArticles() {
-  const posts = await getPosts();
+export default function LatestArticles({ posts }: { posts: Item[] }) {
   const viewPosts = posts.filter(({ name }) => ["the-journey-of-building-a-cs-refund-agent", "meet-our-new-member"].includes(name));
 
   return (
