@@ -21,7 +21,7 @@ export default function Service() {
 
   return (
     <div className="flex max-w-screen flex-col items-center gap-6 px-4 pb-52 text-center">
-      <h2 className="font-oceanic text-[40px] text-left md:text-center leading-[46px] text-[#071414] md:text-[48px] md:leading-[56px] md:whitespace-pre-line">
+      <h2 className="font-oceanic text-[24px] leading-normal text-left md:text-center text-[#071414] md:text-[48px] md:leading-[56px] md:whitespace-pre-line">
         {"Turn Conversations\ninto Conversions"}
       </h2>
       <p className="text-base text-[#767676] text-left md:text-center md:text-lg md:whitespace-pre-line">
@@ -59,7 +59,7 @@ export default function Service() {
           >
             <div className="mx-8 mt-12 flex flex-col gap-4 text-left">
               <p className="text-base text-[#071511]">{title}</p>
-              <h3 className="text-[28px] whitespace-pre-line text-[#071511]">
+              <h3 className="text-xl md:text-[28px] whitespace-pre-line text-[#071511]">
                 {heading}
               </h3>
               <p className="text-base text-[#071511]">{description}</p>

@@ -7,9 +7,9 @@ import { addBasePath } from "@/app/_lib/add-base-path";
 
 export default function OpenSource() {
   return (
-    <div className="flex w-full flex-col bg-black items-center gap-20 pb-[100px] pt-[200px] px-4 md:pb-0 md:px-8">
+    <div className="flex w-full flex-col bg-[linear-gradient(0deg,_#000_90%,_rgba(0,0,0,0)_100%)] items-center gap-20 pb-[100px] pt-[200px] px-4 md:pb-0 md:px-8">
       <div className="flex flex-col md:items-center md:text-center gap-6">
-        <h2 className="font-oceanic text-[40px] leading-[46px] text-[#E6FDFC] md:whitespace-pre-line">
+        <h2 className="font-oceanic text-[24px] leading-normal md:text-[40px] md:leading-[46px] text-[#E6FDFC] md:whitespace-pre-line">
           {"Based on powerful\nOpen Source Ecosystem"}
         </h2>
         <p className="text-base text-[#BEBEBE] md:text-lg md:whitespace-pre-line">
@@ -29,9 +29,6 @@ export default function OpenSource() {
           autoPlay
           loop
           muted
-          controls
-          controlsList="nodownload"
-          disablePictureInPicture
           playsInline
           className="h-full w-full object-cover"
           preload="auto"

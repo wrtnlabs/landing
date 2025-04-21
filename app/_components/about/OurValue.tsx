@@ -1,11 +1,10 @@
 "use client";
 
 import { OUR_VALUE } from "@/app/_constants/about";
-import { ArrowUpRight, Plus } from "lucide-react";
-import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import { Button } from "../common/button";
 import { openToast } from "../common/toast";
-import { addBasePath } from "@/app/_lib/add-base-path";
+import ValueCard from "./ValueCard";
 
 export default function OurValue() {
   return (
@@ -22,36 +21,7 @@ export default function OurValue() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {OUR_VALUE.map(({ title, content, thumbnail }, i) => (
-            <div key={i} className="flex flex-col gap-4">
-              <h3 className="text-2xl text-[#002424] md:hidden">{title}</h3>
-              <div className="group relative aspect-[703/518] overflow-hidden rounded-2xl text-[#E6FDFC]">
-                <Image
-                  src={addBasePath(thumbnail)}
-                  alt={title}
-                  fill
-                  objectFit="cover"
-                />
-                <div className="absolute top-0 h-full w-full bg-[#000000]/40 opacity-0 backdrop-blur-2xl transition-all duration-300 group-hover:opacity-100" />
-
-                <div className="absolute top-10 right-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#FFFFFF] group-hover:hidden">
-                  <Plus size={32} strokeWidth={1.5} color="#FFFFFF" />
-                </div>
-
-                <div className="flex h-full w-full flex-col justify-center p-8 md:p-14">
-                  <p className="hidden translate-y-[-20px] transform text-base opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 md:block">
-                    Our Value {i + 1}
-                  </p>
-                  <h3 className="mt-4 hidden translate-y-[-20px] transform text-[32px] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 md:block">
-                    {title}
-                  </h3>
-                  <p className="translate-y-[20px] transform text-sm opacity-0 transition-all duration-300 group-hover:block group-hover:translate-y-0 group-hover:opacity-60 md:mt-auto md:text-xl">
-                    {content}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
+          {OUR_VALUE.map((props, i) => <ValueCard key={i} {...props} index={i} />)}
         </div>
       </div>
 
