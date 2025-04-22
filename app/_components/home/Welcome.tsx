@@ -22,8 +22,8 @@ export default function Welcome() {
         {viewPromotion ? (
           <Player
             url="https://studio-pro-fe.s3.ap-northeast-2.amazonaws.com/preview.mp4"
-            playing={true}
-            muted={true}
+            playing
+            muted
           />
         ) : (
           <div className="relative group">
