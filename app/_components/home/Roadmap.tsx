@@ -6,7 +6,7 @@ import { ROADMAP } from "@/app/_constants/roadmap";
 export default function Roadmap() {
   return (
     <section className="flex w-full items-center justify-center bg-linear-to-b from-[#000000] to-[#002424] px-4 md:px-8 py-40 md:h-[960px] md:max-h-screen">
-      <div className="flex w-full max-w-[1440px] flex-col items-center justify-between gap-6 md:flex-row">
+      <div className="flex md:max-w-[1440px] flex-col items-center justify-between gap-6 md:flex-row">
         <div className="flex flex-col gap-6">
           <p className="text-base text-[#E6FDFC]">Roadmap</p>
           <h2 className="font-oceanic text-[24px] leading-normal md:text-[40px] md:leading-[46px] whitespace-pre-line text-[#E6FDFC]">
