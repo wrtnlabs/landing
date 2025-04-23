@@ -16,7 +16,7 @@ export default function BlogList({ posts }: { posts: Item[] }) {
 
     if (filteredPosts.length === 0) {
         return (
-            <p className="text-base text-[#002424] mt-4 text-center">No results found.</p>
+            <p className="text-base text-[#002424] dark:text-zinc-200 mt-4 text-center">No results found.</p>
         )
     }
 

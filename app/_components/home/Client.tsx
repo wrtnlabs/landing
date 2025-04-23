@@ -24,7 +24,7 @@ export default function HomeClient({ posts }: { posts: Item[] }) {
                 <Welcome />
                 <HowItWorks />
                 <Service />
-                <div ref={darkSectionRef}>
+                <div ref={darkSectionRef} className="w-full">
                     <OpenSource />
                     <Roadmap />
                 </div>
