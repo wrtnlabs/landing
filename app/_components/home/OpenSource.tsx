@@ -1,5 +1,4 @@
 import { ArrowRightIcon } from "lucide-react";
-import { Button } from "../common/button";
 import { OPEN_SOURCE } from "@/app/_constants/open-source";
 import Link from "next/link";
 import Image from "next/image";
