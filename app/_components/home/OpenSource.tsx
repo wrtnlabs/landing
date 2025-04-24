@@ -4,23 +4,38 @@ import { OPEN_SOURCE } from "@/app/_constants/open-source";
 import Link from "next/link";
 import Image from "next/image";
 import { addBasePath } from "@/app/_lib/add-base-path";
+import { useScroll, useTransform, motion } from "framer-motion";
+import { useRef } from "react";
+import clsx from "clsx";
 
 export default function OpenSource() {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 0.9", "start 0.8"],
+  });
+
+  const backgroundColor = useTransform(scrollYProgress, [0, 1], ["#FFFFFF", "#000000"]);
+  const titleColor = useTransform(scrollYProgress, [0, 1], ["#071414", "#E6FDFC"]);
+  const textColor = useTransform(scrollYProgress, [0, 1], ["#767676", "#BEBEBE"]);
+  const buttonColor = useTransform(scrollYProgress, [0, 1], ["#002424", "#E6FDFC"]);
+
   return (
-    <div className="flex w-full flex-col bg-[linear-gradient(0deg,_#000_90%,_rgba(0,0,0,0)_100%)] items-center gap-20 pb-[100px] pt-[200px] px-4 md:pb-0 md:px-8">
-      <div className="flex flex-col md:items-center md:text-center gap-6">
-        <h2 className="font-oceanic text-[24px] leading-normal md:text-[40px] md:leading-[46px] text-[#E6FDFC] md:whitespace-pre-line">
+    <motion.div style={{ backgroundColor }} className={clsx(["flex w-full flex-col items-center gap-20 pb-[100px] pt-[200px] md:pb-0 md:px-8 duration-1000 transition-all"])}>
+      <div ref={sectionRef} className="flex flex-col md:items-center md:text-center gap-6 px-4">
+        <motion.h2 style={{ color: titleColor }} className={clsx(["font-oceanic text-[24px] leading-normal md:text-[40px] md:leading-[46px] md:whitespace-pre-line duration-700 transition-all"])}>
           {"Based on powerful\nOpen Source Ecosystem"}
-        </h2>
-        <p className="text-base text-[#BEBEBE] md:text-lg md:whitespace-pre-line">
+        </motion.h2>
+        <motion.p style={{ color: textColor }} className={clsx(["text-base md:text-lg md:whitespace-pre-line duration-700 transition-all"])}>
           Wrtn Agent OS is built on a powerful and reliable Wrtn Labs Open
           Source Ecosystem
-        </p>
+        </motion.p>
 
         <Link href="https://github.com/wrtnlabs" target="_blank">
-          <Button variant="secondary" className="text-[#E6FDFC] border-[#E6FDFC]">
+          <motion.button style={{ color: buttonColor, borderColor: buttonColor }} className="text-sm border rounded-full cursor-pointer flex gap-2 px-6 py-[14px] transition-all duration-300">
             Our Ecosystem <ArrowRightIcon strokeWidth={1.5} size={20} />
-          </Button>
+          </motion.button>
         </Link>
       </div>
 
@@ -71,6 +86,6 @@ export default function OpenSource() {
           </Link>
         ))}
       </div>
-    </div>
+    </motion.div >
   );
 }
