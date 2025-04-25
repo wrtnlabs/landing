@@ -28,18 +28,18 @@ export default function BlogList({ posts }: { posts: Item[] }) {
                     <Link
                         href={`/blog${route}`}
                         key={route}
-                        className="group flex w-full hover:bg-black/10 dark:hover:bg-white/20 duration-300 transition-all cursor-pointer flex-col gap-2 rounded-xl border-gray-700 p-4"
+                        className="group flex w-full hover:bg-black/10 dark:hover:bg-white/20 duration-300 decoration-transparent! transition-all cursor-pointer flex-col gap-2 rounded-xl border-gray-700 p-4"
                     >
-                        <h1 className="h-16 text-lg font-medium text-zinc-800 dark:text-zinc-50">
+                        <h1 className="h-16 text-lg! m-0! font-medium! text-zinc-800 dark:text-zinc-50">
                             {title}
                         </h1>
                         <div className="flex w-full items-center justify-between">
                             <div className="flex gap-1 text-base text-gray-400 dark:text-gray-300">
-                                <p>{date}</p>
-                                <p>∙</p>
-                                <p>{author}</p>
+                                <p className="m-0!">{date}</p>
+                                <p className="m-0!">∙</p>
+                                <p className="m-0!">{author}</p>
                             </div>
-                            <div className="w-fit rounded-full bg-gray-100 dark:bg-gray-800 px-2 py-1 text-xs text-gray-400 border-[0.5px] border-gray-300 dark:border-gray-600">
+                            <div className="w-fit rounded-full bg-gray-100 dark:bg-gray-800 px-2 py-1 text-xs font-[400] text-gray-400 border-[0.5px] border-gray-300 dark:border-gray-600">
                                 # {tags}
                             </div>
                         </div>
