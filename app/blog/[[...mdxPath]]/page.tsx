@@ -29,20 +29,17 @@ export default async function BlogDetailPage(props: any) {
   const isBlogPage = Object.keys(params).length !== 0
 
   return (
-    <>
-      <Header isAgentOS={false} isDark={false} />
+    <Layout banner={<Header isAgentOS={false} />}>
       {isBlogPage ? (
-        <Layout>
-          <div className="pt-20">
-            <Wrapper toc={toc} metadata={filteredMetadata}>
-              <MDXContent {...props} params={params} />
-            </Wrapper>
-          </div>
-        </Layout>
+        <div className="pt-20">
+          <Wrapper toc={toc} metadata={filteredMetadata}>
+            <MDXContent {...props} params={params} />
+          </Wrapper>
+        </div>
       ) : (
         <BlogHome />
       )}
-    </>
+    </Layout>
 
   );
 }
